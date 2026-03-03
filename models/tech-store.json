@@ -5,7 +5,7 @@
   "author": "A.R",
   "version": "CA1",
   "location": "Waterford",
-  "heroImage": "/f117.jpg",
+  "heroImage": "/F117.jpg",
   "mapImage": "/mapofworld.jpg",
 
   "contact": {
@@ -37,7 +37,7 @@
         {
           "name": "F-117 Nighthawk",
           "role": "Stealth attack (retired)",
-          "image": "/b21.jpg",
+          "image": "/F117.jpg",
           "description": "Stealth Gen, Early low-observable attack aircraft built for precision strike and survivability against radar-guided defenses."
         },
         {
