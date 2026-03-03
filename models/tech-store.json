@@ -37,7 +37,7 @@
         {
           "name": "F-117 Nighthawk",
           "role": "Stealth attack (retired)",
-          "image": "/f117.jpg",
+          "image": "/b21.jpg",
           "description": "Stealth Gen, Early low-observable attack aircraft built for precision strike and survivability against radar-guided defenses."
         },
         {
@@ -86,7 +86,7 @@
         {
           "name": "Shield AI ",
           "role": "Autonomy / uncrewed teaming ",
-          "image": "/ShieldAI.jpg",
+          "image": "/shieldai.jpg",
           "description": "Autonomous fighter pilots and unmanned aircraft designed for reconnaissance, combat assistance."
         },
 
