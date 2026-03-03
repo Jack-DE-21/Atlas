@@ -23,5 +23,6 @@ app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
 
 app.use("/", routes);
+app.use(express.static("public"));
 
 app.listen(port, () => logger.info(`Your app is listening on port ${port}`));
