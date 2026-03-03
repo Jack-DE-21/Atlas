@@ -6,7 +6,9 @@ import logger from "./utils/logger.js";
 import { create } from 'express-handlebars';
 
 const app = express();
-const port = 3000;
+
+// IMPORTANT FOR RENDER
+const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 
@@ -22,6 +24,9 @@ const handlebars = create({
 app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
 
+//  YOU WERE MISSING THIS IN THE SNIPPET
+app.use("/", routes);
 
-
-app.listen(port, () => logger.info(`Your app is listening on port ${port}`));
+app.listen(port, () =>
+  logger.info(`Your app is listening on port ${port}`)
+);
