@@ -1,0 +1,23 @@
+<section class="ui segment">
+  <h2 class="ui header">Hall of Fame</h2>
+  <p>COLLECTIONS</p>
+
+  {{#each categories}}
+    <h3 class="ui dividing header">{{title}}</h3>
+
+    <div class="ui three stackable cards">
+      {{#each items}}
+        <div class="ui card">
+          <div class="image">
+            <img src="{{image}}" alt="{{name}}">
+          </div>
+          <div class="content">
+            <div class="header">{{name}}</div>
+            <div class="meta">{{role}}</div>
+            <div class="description">{{description}}</div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  {{/each}}
+</section>

@@ -1,0 +1,24 @@
+<section class="ui segment">
+  <h2 class="ui header">{{category.title}}</h2>
+
+  {{#if category.items.length}}
+    <table class="ui celled table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each category.items}}
+          <tr>
+            <td>{{name}}</td>
+            <td>{{role}}</td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  {{else}}
+    <p>Empty category.</p>
+  {{/if}}
+</section>

@@ -1,0 +1,111 @@
+{{!-- views/about.hbs --}}
+
+<section class="about">
+  <div class="ui segment">
+    <h1 class="ui header">About</h1>
+
+    {{!-- TOP: Contact + Location/Map --}}
+    <div class="ui stackable two column grid">
+
+      {{!-- Contact details --}}
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="header">Contact Details</div>
+            <div class="meta">Author / Company</div>
+          </div>
+
+          <div class="content">
+            <p><strong>Company:</strong> {{app.contact.company}}</p>
+            <p><strong>Author:</strong> {{app.author}}</p>
+            <p><strong>Email:</strong> {{app.contact.email}}</p>
+            <p><strong>Phone:</strong> {{app.contact.phone}}</p>
+            <p><strong>Address:</strong> {{app.contact.address}}</p>
+          </div>
+
+          {{#if app.website}}
+          <div class="extra content">
+            <i class="linkify icon"></i>
+            {{app.website}}
+          </div>
+          {{/if}}
+        </div>
+      </div>
+
+      {{!-- Location / Map --}}
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="content">
+            <div class="header">Location</div>
+            <div class="meta">{{app.location}}</div>
+          </div>
+
+          <div class="content">
+            <div class="zoom-wrap">
+              <img class="ui image" src="{{app.mapImage}}" alt="Map showing location" />
+            </div>
+
+            {{#if app.location}}
+              <p style="margin-top: 0.8rem;"><strong>Based in:</strong> {{app.location}}</p>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    {{!-- STATS --}}
+    <div class="ui divider"></div>
+
+    <div class="ui fluid card">
+      <div class="content">
+        <div class="header">App Statistics</div>
+        <div class="meta">Live totals</div>
+      </div>
+
+      <div class="content">
+        <div class="ui two column grid">
+          <div class="column">
+            <div class="ui tiny header">Total categories</div>
+            <div class="ui large header">{{stats.categoryCount}}</div>
+          </div>
+          <div class="column">
+            <div class="ui tiny header">Total items</div>
+            <div class="ui large header">{{stats.itemCount}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{!-- ICON ROW (NOW AT THE BOTTOM) --}}
+    <div class="ui divider"></div>
+
+    <div class="ui stackable five column center aligned grid icon-row" style="margin-top: 1rem;">
+      <div class="column icon-block">
+        <i class="huge plane icon"></i>
+        <div><b>APP TITLE:</b><br>{{app.title}}</div>
+      </div>
+
+      <div class="column icon-block">
+        <i class="huge code branch icon"></i>
+        <div><b>APP VERSION:</b><br>{{app.version}}</div>
+      </div>
+
+      <div class="column icon-block">
+        <i class="huge map marker alternate icon"></i>
+        <div><b>MADE IN:</b><br>{{app.location}}</div>
+      </div>
+
+      <div class="column icon-block">
+        <i class="huge user icon"></i>
+        <div><b>CREATED BY:</b><br>{{app.author}}</div>
+      </div>
+
+      <div class="column icon-block">
+        <i class="huge hands helping icon"></i>
+        <div><b>WITH HELP FROM:</b><br>MARY LYNG</div>
+      </div>
+    </div>
+
+  </div>
+</section>

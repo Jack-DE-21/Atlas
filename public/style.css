@@ -1,0 +1,157 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 0;                 /* better on ultrawide */
+  padding: 32px;             /* controlled spacing instead of margin */
+  min-height: 100vh;
+  background:
+    radial-gradient(1000px 600px at 20% 10%, rgba(246, 59, 190, 0.55), transparent 60%),
+    radial-gradient(900px 500px at 80% 20%, rgba(168, 85, 247, 0.55), transparent 60%),
+    linear-gradient(135deg, #0b1026 0%, #3b1d77 55%, #d81d8a 100%);
+  background-attachment: fixed;
+  color: #02e05f;
+}
+
+@media (min-width: 1600px) {
+  body { padding: 48px; }
+}
+
+h1, h2, h3, h4, h5, p, .ui.header {
+  color: inherit;
+}
+
+/* ---------- ULTRAWIDE / LAYOUT ---------- */
+/* Let content scale nicely on huge screens */
+.ui.container {
+  width: min(1200px, 92vw) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Wider on big screens */
+@media (min-width: 1600px) {
+  .ui.container { width: min(1500px, 86vw) !important; }
+}
+
+/* Super-ultrawide */
+@media (min-width: 2200px) {
+  .ui.container { width: min(1800px, 80vw) !important; }
+}
+
+/* ---------- GLASS THEME ---------- */
+.ui.segment,
+.ui.card,
+.ui.menu,
+.ui.message,
+.ui.table {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18) !important;
+  border-radius: 18px !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Menu slightly more opaque */
+.ui.menu {
+  background: rgba(255, 255, 255, 0.16) !important;
+}
+
+/* Segment spacing */
+.ui.segment {
+  padding: 1.2rem !important;
+}
+
+/* ---------- TABLES ---------- */
+.ui.table {
+  overflow: hidden;
+  color: #f8fafc !important;
+}
+
+.ui.table thead th {
+  background: rgba(0, 0, 0, 0.25) !important;
+  color: #f8fafc !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.ui.table tbody td {
+  background: transparent !important;
+  color: #e5e7eb !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.ui.table tbody tr:hover td {
+  background: rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ---------- FORMS / INPUTS ---------- */
+.ui.input > input,
+input,
+textarea {
+  background: rgba(255, 255, 255, 0.10) !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.22) !important;
+}
+
+/* ---------- IMAGES ---------- */
+.ui.segment img,
+.ui.card img,
+.ui.image img {
+  border-radius: 18px;
+}
+
+/* About: keep it tidy but NOT tiny on ultrawide */
+.about .ui.segment {
+  margin: 1.5rem auto;
+}
+
+/* Only limit the map image height (prevents huge map) */
+.about .zoom-wrap img {
+  max-height: 360px;
+  object-fit: cover;
+}
+
+/* ---------- ZOOM HOVER (IMAGES) ---------- */
+.zoom-wrap {
+  overflow: hidden;
+  border-radius: 18px;
+}
+
+.zoom-wrap img {
+  display: block;
+  width: 100%;
+  transition: transform 250ms ease;
+  will-change: transform;
+}
+
+.zoom-wrap:hover img {
+  transform: scale(1.05);
+}
+
+/* ---------- CARD HOVER (HALL OF FAME) ---------- */
+.ui.card {
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.ui.card:hover {
+  transform: translateY(-4px) scale(1.12);
+  box-shadow: 0 28px 90px rgba(216, 66, 6, 0.28) !important;
+}
+
+/* ----------  ICON  HOVER (ABOUT) ---------- */
+.icon-row .icon-block {
+  transition: transform 380ms ease;
+  will-change: transform;
+}
+
+.icon-row .icon-block:hover {
+  transform: scale(1.40);
+}

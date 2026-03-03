@@ -1,0 +1,135 @@
+{
+ "app": {
+  "title": "Military Technology Atlas",
+  "tagline": "Fighters, Bombers, Tankers, CCA ,EW/SEAD",
+  "author": "A.R",
+  "version": "CA1",
+  "location": "Waterford",
+  "heroImage": "/f117.jpg",
+  "mapImage": "/mapofworld.jpg",
+
+  "contact": {
+    "company": "A.R Aviation Analytics ",
+    "email": "contact@ar-aviation.test",
+    "phone": "+353 01 234 5678",
+    "address": "1 Aviation Way, Waterford, Ireland"
+  }
+},
+
+
+  "categories": [
+    {
+      "id": "fighters",
+      "title": "Fighter Jets",
+      "items": [
+        {
+          "name": "F-22 Raptor",
+          "role": "Air superiority",
+          "image": "/f22.jpg",
+          "description": "5th gen Stealth air dominance fighter designed for contested airspace with high-end sensors and maneuverability."
+        },
+        {
+          "name": "F-35 Lightning II",
+          "role": "Multirole / strike",
+          "image": "/f35.jpg",
+          "description": "5th gen Multirole stealth aircraft built around sensor fusion and networked targeting across air/land/sea missions."
+        },
+        {
+          "name": "F-117 Nighthawk",
+          "role": "Stealth attack (retired)",
+          "image": "/f117.jpg",
+          "description": "Stealth Gen, Early low-observable attack aircraft built for precision strike and survivability against radar-guided defenses."
+        },
+        {
+          "name": "F-47",
+          "role": "6th gen concept / air dominance ",
+          "image": "/f47.jpg",
+          "description": "Next-gen capability concepts"
+        },
+         {
+          "name": "Rafale ",
+          "role": "Multirole / strike",
+          "image": "/rafael.jpg",
+          "description": "Ground attack, reconnaissance, and nuclear deterrence missions."
+
+        },
+          {"name": "E-A 18 growler",
+          "role": "Electronic warfare",
+          "image": "/ea18growler.jpg",
+          "description": "Electronic Attack warfare and suppression of enemy air defense systems"
+        }
+        
+      ]
+    },
+    {
+      "id": "bombers",
+      "title": "Bombers",
+      "items": [
+        {
+          "name": "B-2 Spirit",
+          "role": "Stealth strategic bomber",
+          "image": "/b2.jpg",
+          "description": "Flying-wing stealth bomber optimized for long-range penetration and high-value strike missions."
+        },
+        {
+          "name": "B-21 Raider",
+          "role": "Next-gen stealth bomber",
+          "image": "/b21.jpg",
+          "description": "Next-generation bomber intended for survivable long-range strike with modern systems and maintainability focus, can be fully autonomous or human piloted designed for deep enemy penetration."
+        }
+      ]
+    },
+    {
+      "id": "cca",
+      "title": "CCA",
+      "items": [
+        {
+          "name": "Shield AI ",
+          "role": "Autonomy / uncrewed teaming ",
+          "image": "/ShieldAI.jpg",
+          "description": "Autonomous fighter pilots and unmanned aircraft designed for reconnaissance, combat assistance."
+        },
+
+         {
+          "name": "ANDURIL ",
+          "role": "AI Combat assistance",
+          "image": "/andurilcca.jpg",
+          "description": "Designed to work along piloted aircraft can adjust role based on threats"
+        },
+
+
+
+         {
+          "name": "BOEING MQ-25 Stingray",
+          "role": "AI air refueling",
+          "image": "/beoingcca.jpg",
+          "description": "Boeing Autonomous Tanker"
+
+         }
+
+
+
+
+
+      ]
+    },
+    {
+      "id": "tankers-cargo",
+      "title": "Tankers / Cargo",
+      "items": [
+        {
+          "name": "KC-135 Stratotanker",
+          "role": "Aerial refueling (tanker)",
+          "image": "/kc135.jpg",
+          "description": "Aerial refueling platform that extends fighter/bomber range and time-on-station for sustained operations."
+        },
+        {
+          "name": "C-17 Globemaster III",
+          "role": "Strategic airlift (cargo)",
+          "image": "/c17.jpg",
+          "description": "Heavy airlifter built for rapid global transport of troops, vehicles, and supplies into austere or major airfields."
+        }
+      ]
+    }
+  ]
+}
