@@ -7,7 +7,7 @@ import { create } from 'express-handlebars';
 
 const app = express();
 
-// IMPORTANT FOR RENDER
+//  FOR RENDER
 const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
@@ -24,7 +24,7 @@ const handlebars = create({
 app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
 
-//  YOU WERE MISSING THIS IN THE SNIPPET
+
 app.use("/", routes);
 
 app.listen(port, () =>
