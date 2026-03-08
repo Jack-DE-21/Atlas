@@ -6,7 +6,7 @@
   "version": "CA1",
   "location": "Waterford",
   "heroImage": "/F117.jpg",
-  "mapImage": "/mapofworld.jpg",
+  "mapImage": "/map.png",
 
   "contact": {
     "company": "A.R Aviation Analytics ",
