@@ -1,5 +1,6 @@
 'use strict';
 
+import { v4 as uuidv4 } from 'uuid';
 import techStore from '../models/tech-store.js';
 
 const dashboard = {
@@ -7,6 +8,23 @@ const dashboard = {
     const app = techStore.getApp();
     const categories = techStore.getCategories();
     res.render('dashboard', { title: 'Dashboard', app, categories });
+  },
+
+  async addCategory(req, res) {
+    const newCategory = {
+      id: uuidv4(),
+      title: req.body.title,
+      items: [],
+    };
+
+    await techStore.addCategory(newCategory);
+    res.redirect('/dashboard');
+  },
+
+  async deleteCategory(req, res) {
+    const categoryId = req.params.id;
+    await techStore.removeCategory(categoryId);
+    res.redirect('/dashboard');
   },
 };
 

@@ -7,10 +7,11 @@ import { create } from 'express-handlebars';
 
 const app = express();
 
-//  FOR RENDER
+// FOR RENDER
 const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
+app.use(express.urlencoded({ extended: true }));
 
 const handlebars = create({
   extname: '.hbs',
@@ -23,7 +24,6 @@ const handlebars = create({
 
 app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
-
 
 app.use("/", routes);
 

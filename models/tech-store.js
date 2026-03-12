@@ -14,8 +14,24 @@ const techStore = {
   },
 
   getCategoryById(id) {
-    const categories = this.getCategories();
-    return categories.find((c) => c.id === id);
+    return this.store.findOneBy('categories', (c) => c.id === id);
+  },
+
+  async addCategory(category) {
+    await this.store.addCollection('categories', category);
+  },
+
+  async addItemToCategory(categoryId, item) {
+    await this.store.addItem('categories', categoryId, 'items', item);
+  },
+
+  async removeItemFromCategory(categoryId, itemId) {
+    await this.store.removeItem('categories', categoryId, 'items', itemId);
+  },
+
+  async removeCategory(categoryId) {
+    const category = this.getCategoryById(categoryId);
+    await this.store.removeCollection('categories', category);
   },
 };
 
