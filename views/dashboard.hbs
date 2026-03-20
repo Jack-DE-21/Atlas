@@ -3,31 +3,62 @@
 
   {{#each categories}}
     <div class="ui segment">
-      <h3 class="ui header">{{title}}</h3>
-      <p>Total systems: {{items.length}}</p>
+      <h3 class="ui header">{{uppercase title}}</h3>
+
+      <p>
+        <i class="sitemap icon"></i>
+        Total systems: {{items.length}}
+
+        {{#if date}}
+          <br />
+          <i class="calendar alternate outline icon"></i>
+          Created on <i>{{formatDate date}}</i>
+        {{/if}}
+      </p>
+
+      {{#if rating}}
+        <p>
+          <span
+            class="ui yellow disabled rating"
+            data-icon="star"
+            data-rating="{{rating}}"
+            data-max-rating="5">
+          </span>
+
+          <span style="color: grey; font-size: 90%; font-style: italic">
+            {{highlightPopular rating}}
+          </span>
+        </p>
+      {{/if}}
 
       <a class="ui icon button" href="/category/{{id}}" title="Open {{title}}">
         <i class="folder open outline icon"></i>
       </a>
 
       <a class="ui icon button" href="/dashboard/deletecategory/{{id}}" title="Delete {{title}}">
-        <i class="trash black icon"></i>
+        <i class="trash violet icon"></i>
       </a>
     </div>
   {{/each}}
 </section>
 
-
 <section class="ui segment">
   <h3 class="ui header">Add Category</h3>
 
   <form class="ui form" action="/dashboard/addcategory" method="POST">
-    <div class="field">
-      <label>Category Title</label>
-      <input type="text" name="title" placeholder="Enter category title" required>
+    <div class="two fields">
+      <div class="field">
+        <label>Category Title</label>
+        <input type="text" name="title" placeholder="Enter category title" required>
+      </div>
+
+      <div class="field">
+        <label>Rating</label>
+        <input type="range" name="rating" min="1" max="5" value="3">
+      </div>
     </div>
 
-    <button class="ui green button" type="submit">
+    <button class="ui violet button" type="submit">
       Add Category
     </button>
   </form>

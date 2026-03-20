@@ -6,8 +6,6 @@ import logger from "./utils/logger.js";
 import { create } from 'express-handlebars';
 
 const app = express();
-
-// FOR RENDER
 const port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
@@ -18,6 +16,25 @@ const handlebars = create({
   helpers: {
     eq(a, b) {
       return a === b;
+    },
+
+    uppercase(inputString) {
+      return inputString.toUpperCase();
+    },
+
+    formatDate(date) {
+      const dateCreated = new Date(date);
+      const options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "2-digit",
+      };
+      return dateCreated.toLocaleDateString("en-IE", options);
+    },
+
+    highlightPopular(rating) {
+      return rating >= 4 ? "Popular with listeners!" : "";
     },
   },
 });

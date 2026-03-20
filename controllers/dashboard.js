@@ -11,9 +11,13 @@ const dashboard = {
   },
 
   async addCategory(req, res) {
+    const timestamp = new Date();
+
     const newCategory = {
       id: uuidv4(),
       title: req.body.title,
+      rating: parseInt(req.body.rating),
+      date: timestamp,
       items: [],
     };
 

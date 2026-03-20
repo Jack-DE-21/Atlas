@@ -17,6 +17,7 @@
   "categories": [
     {
       "id": "fighters",
+      "rating": 5,
       "title": "Fighter Jets",
       "items": [
         {
@@ -120,6 +121,44 @@
     {
       "id": "046f15ed-4a43-491f-9d59-dff50134c898",
       "title": "Test",
+      "items": []
+    },
+    {
+      "id": "e2694cdc-0950-4828-bb8d-02aebb2b8b36",
+      "title": "ksahjdxsodlklaskldassdsafqjwhshday",
+      "items": []
+    },
+    {
+      "id": "9cd75e1e-9643-4754-94dd-a5d150c2c10c",
+      "title": "wsdEFACSDESDEACSDEACSDEACSDEACSDEACSDEACSDEACSDEACacacacacacacacacacacacac",
+      "items": []
+    },
+    {
+      "id": "c6e180b4-f188-4f11-807f-0291d433817a",
+      "title": "xd",
+      "rating": 5,
+      "date": "2026-03-20T23:51:31.440Z",
+      "items": []
+    },
+    {
+      "id": "b5dcff99-d069-437a-81c1-8d7b18b874e5",
+      "title": "ss",
+      "rating": 3,
+      "date": "2026-03-20T23:51:41.735Z",
+      "items": []
+    },
+    {
+      "id": "3fd208a3-f425-4e76-a2c7-d1b697fd1b58",
+      "title": "df",
+      "rating": 3,
+      "date": "2026-03-20T23:51:48.309Z",
+      "items": []
+    },
+    {
+      "id": "c5fb295a-876e-45ed-9225-a0529cd802ce",
+      "title": "sd",
+      "rating": 1,
+      "date": "2026-03-20T23:51:55.182Z",
       "items": []
     }
   ]
