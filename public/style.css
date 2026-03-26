@@ -140,3 +140,13 @@ h1, h2, h3, h4, h5, p, .ui.header {
 .ui.segment + .ui.segment {
   margin-top: 1.5rem !important;
 }
+
+
+.editSubmit {
+  border: none;
+  background: none;
+}
+
+.hide {
+  display: none;
+}

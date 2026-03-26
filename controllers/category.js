@@ -36,6 +36,20 @@ const category = {
     res.redirect(`/category/${categoryId}`);
   },
 
+  async updateItem(req, res) {
+    const categoryId = req.params.id;
+    const itemId = req.params.itemid;
+
+    const updatedItem = {
+      id: itemId,
+      name: req.body.name,
+      role: req.body.role,
+    };
+
+    await techStore.editItem(categoryId, itemId, updatedItem);
+    res.redirect(`/category/${categoryId}`);
+  },
+
   async deleteItem(req, res) {
     const categoryId = req.params.id;
     const itemId = req.params.itemid;

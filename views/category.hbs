@@ -2,30 +2,40 @@
   <h2 class="ui header">{{category.title}}</h2>
 
   {{#if category.items.length}}
-    <table class="ui celled table">
+
+    <table class="ui unstackable striped table">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Role</th>
-          <th></th>
+          <th class="four wide">Name</th>
+          <th class="four wide">Role</th>
+          <th class="two wide"> </th>
+          <th class="two wide"> </th>
         </tr>
       </thead>
       <tbody>
         {{#each category.items}}
-          <tr>
-            <td>{{name}}</td>
-            <td>{{role}}</td>
-            <td class="center aligned">
-              <a href="/category/{{../category.id}}/deleteitem/{{id}}" title="Delete item">
-                <i class="ui vioilet trash icon"></i>
-              </a>
-            </td>
-          </tr>
+          {{> listOneItem categoryId=../category.id itemIndex=@index}}
+          {{> edititem categoryId=../category.id itemIndex=@index}}
+
+          <script>
+  document.querySelector("#showEdit{{@index}}").addEventListener("click", () => {
+    document.querySelector("#item{{@index}}").style.display = "none";
+    document.querySelector("#edit{{@index}}").style.display = "table-row";
+  });
+
+  document.querySelector("#hideEdit{{@index}}").addEventListener("click", () => {
+    document.querySelector("#item{{@index}}").style.display = "table-row";
+    document.querySelector("#edit{{@index}}").style.display = "none";
+  });
+</script>
         {{/each}}
       </tbody>
     </table>
+
   {{else}}
-    <p>Empty category.</p>
+    <h3 class="ui message">
+      Empty category.
+    </h3>
   {{/if}}
 
   <form class="ui form" action="/category/{{category.id}}/additem" method="POST">

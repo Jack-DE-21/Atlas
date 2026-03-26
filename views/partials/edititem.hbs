@@ -1,0 +1,37 @@
+<tr class="hide" id="edit{{itemIndex}}">
+  <td>
+    <form class="ui form" method="POST" action="/category/{{categoryId}}/updateitem/{{id}}">
+      <span class="ui input">
+        <input
+          type="text"
+          name="name"
+          autofocus
+          required
+          title="Please include a valid Name"
+          placeholder="Name"
+          value="{{name}}">
+      </span>
+  </td>
+  <td>
+      <span class="ui input">
+        <input
+          type="text"
+          name="role"
+          required
+          title="Please include a valid Role"
+          placeholder="Role"
+          value="{{role}}">
+      </span>
+  </td>
+  <td class="center aligned">
+      <button type="button" class="editSubmit" id="hideEdit{{itemIndex}}" title="Exit without saving">
+        <i class="ui undo icon"></i>
+      </button>
+  </td>
+  <td class="center aligned">
+      <button type="submit" class="editSubmit" title="Save changes">
+        <i class="ui save icon"></i>
+      </button>
+    </form>
+  </td>
+</tr>

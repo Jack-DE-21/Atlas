@@ -1,0 +1,20 @@
+<tr id="item{{itemIndex}}">
+  <td>
+    {{name}}
+  </td>
+  <td>
+    {{role}}
+  </td>
+
+  <td class="center aligned">
+    <button type="button" title="Edit item" class="editSubmit" id="showEdit{{itemIndex}}">
+      <i class="ui pencil icon"></i>
+    </button>
+  </td>
+
+  <td class="center aligned">
+    <a href="/category/{{categoryId}}/deleteitem/{{id}}" title="Delete item">
+      <i class="ui black trash icon"></i>
+    </a>
+  </td>
+</tr>

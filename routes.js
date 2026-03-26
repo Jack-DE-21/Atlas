@@ -17,7 +17,9 @@ router.get('/category/:id', category.index);
 
 router.post('/dashboard/addcategory', dashboard.addCategory);
 router.post('/category/:id/additem', category.addItem);
+router.post('/category/:id/updateitem/:itemid', category.updateItem);
 router.get('/category/:id/deleteitem/:itemid', category.deleteItem);
 
 router.get('/dashboard/deletecategory/:id', dashboard.deleteCategory);
+
 export default router;

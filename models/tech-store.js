@@ -25,6 +25,10 @@ const techStore = {
     await this.store.addItem('categories', categoryId, 'items', item);
   },
 
+  async editItem(categoryId, itemId, updatedItem) {
+    await this.store.editItem('categories', categoryId, itemId, 'items', updatedItem);
+  },
+
   async removeItemFromCategory(categoryId, itemId) {
     await this.store.removeItem('categories', categoryId, 'items', itemId);
   },

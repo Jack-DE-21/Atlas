@@ -55,6 +55,11 @@
           "role": "Electronic warfare",
           "image": "/ea18growler.jpg",
           "description": "Electronic Attack warfare and suppression of enemy air defense systems"
+        },
+        {
+          "id": "e1ec2d85-e67f-4720-ba2c-6cd694773584",
+          "name": "feg",
+          "role": "grefggrreyyerwe"
         }
       ]
     },
@@ -63,16 +68,16 @@
       "title": "Bombers",
       "items": [
         {
+          "id": "b2-spirit",
           "name": "B-2 Spirit",
           "role": "Stealth strategic bomber",
           "image": "/b2.jpg",
           "description": "Flying-wing stealth bomber optimized for long-range penetration and high-value strike missions."
         },
         {
+          "id": "b21-raider",
           "name": "B-21 Raider",
-          "role": "Next-gen stealth bomber",
-          "image": "/b21.jpg",
-          "description": "Next-generation bomber intended for survivable long-range strike with modern systems and maintainability focus, can be fully autonomous or human piloted designed for deep enemy penetration."
+          "role": "Next-gen stealth bomber"
         }
       ]
     },
@@ -97,6 +102,11 @@
           "role": "AI air refueling",
           "image": "/beoingcca.jpg",
           "description": "Boeing Autonomous Tanker"
+        },
+        {
+          "id": "ea1a1292-3cc1-4b89-bb45-962be19f728d",
+          "name": "bol",
+          "role": "knou"
         }
       ]
     },
@@ -115,18 +125,35 @@
           "role": "Strategic airlift (cargo)",
           "image": "/c17.jpg",
           "description": "Heavy airlifter built for rapid global transport of troops, vehicles, and supplies into austere or major airfields."
+        },
+        {
+          "id": "21df26f6-5c15-4ed0-85fd-7b4a7fa2232d",
+          "name": "ytr",
+          "role": "fhgui"
         }
       ]
     },
     {
       "id": "046f15ed-4a43-491f-9d59-dff50134c898",
       "title": "Test",
-      "items": []
+      "items": [
+        {
+          "id": "ffa851fc-b3f0-439e-944f-1ae589fbc828",
+          "name": "wgrr",
+          "role": "rwggggrregetyu"
+        }
+      ]
     },
     {
       "id": "e2694cdc-0950-4828-bb8d-02aebb2b8b36",
       "title": "ksahjdxsodlklaskldassdsafqjwhshday",
-      "items": []
+      "items": [
+        {
+          "id": "68db20df-ac1b-457b-a639-ef7a1b914e1d",
+          "name": "rsdthy",
+          "role": "sthytyury"
+        }
+      ]
     },
     {
       "id": "9cd75e1e-9643-4754-94dd-a5d150c2c10c",
@@ -160,6 +187,46 @@
       "rating": 1,
       "date": "2026-03-20T23:51:55.182Z",
       "items": []
+    },
+    {
+      "id": "f905a9a5-a279-4355-8c36-0cd6da910047",
+      "title": "fwewfe",
+      "rating": 5,
+      "date": "2026-03-26T16:32:31.435Z",
+      "items": []
+    },
+    {
+      "id": "27a79f27-43a2-4129-974b-87c1d5611d1b",
+      "title": "ewf",
+      "rating": 1,
+      "date": "2026-03-26T16:32:37.207Z",
+      "items": []
+    },
+    {
+      "id": "72a1d658-8e0e-49b6-bcb2-094efc33e26d",
+      "title": "dfef",
+      "rating": 3,
+      "date": "2026-03-26T16:45:44.069Z",
+      "items": [
+        {
+          "id": "40e07fd9-1563-4c08-bcbb-ad0dd91d30f8",
+          "name": "fwe",
+          "role": "wfe"
+        }
+      ]
+    },
+    {
+      "id": "854cce7e-2383-49e7-96dc-41625a2b275e",
+      "title": "rhrthj",
+      "rating": 5,
+      "date": "2026-03-26T17:11:48.289Z",
+      "items": [
+        {
+          "id": "9da32f3c-7edb-49e4-8ea9-e6e307385323",
+          "name": "hth",
+          "role": "ehrhtrthyrthy"
+        }
+      ]
     }
   ]
 }
