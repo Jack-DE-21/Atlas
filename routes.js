@@ -6,6 +6,8 @@ import dashboard from './controllers/dashboard.js';
 import halloffame from './controllers/halloffame.js';
 import about from './controllers/about.js';
 import category from './controllers/category.js';
+import stats from "./controllers/stats.js";
+
 
 const router = express.Router();
 
@@ -22,4 +24,5 @@ router.get('/category/:id/deleteitem/:itemid', category.deleteItem);
 
 router.get('/dashboard/deletecategory/:id', dashboard.deleteCategory);
 
+router.get("/stats", stats.createView);
 export default router;

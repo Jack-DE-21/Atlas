@@ -37,6 +37,12 @@ const techStore = {
     const category = this.getCategoryById(categoryId);
     await this.store.removeCollection('categories', category);
   },
+getAllCategories() {
+  const data = JSON.parse(fs.readFileSync(filePath, "utf-8"));
+  return data.categories || [];
+},
+
 };
+
 
 export default techStore;

@@ -1,11 +1,18 @@
 <nav class="ui stackable menu">
   <header class="ui header item">
-    <a href="/">{{app.title}}</a>
+    <a href="/"> Military Technology Atlas </a>
   </header>
 
   <div class="right menu">
-    <a class="item {{#if (eq active 'dashboard')}}active{{/if}}" href="/dashboard">Dashboard</a>
-      </div><a class="item {{#if (eq active 'halloffame')}}active{{/if}}" href="/halloffame">Hall of Fame</a>
-    <a class="item {{#if (eq active 'about')}}active{{/if}}" href="/about">About</a>
-    
+    <a id="dashboard" class="item" href="/dashboard"> Dashboard </a>
+       <a id="hallOfFame" class="item" href="/halloffame"> Hall of Fame </a>
+           <a id="stats" class="item" href="/stats"> Statistics </a>
+    <a id="about" class="item" href="/about"> About </a>
+ 
+
+  </div>
 </nav>
+
+<script>
+  document.querySelector("#{{id}}").classList.add("active");
+</script>

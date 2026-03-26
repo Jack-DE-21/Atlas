@@ -55,11 +55,6 @@
           "role": "Electronic warfare",
           "image": "/ea18growler.jpg",
           "description": "Electronic Attack warfare and suppression of enemy air defense systems"
-        },
-        {
-          "id": "e1ec2d85-e67f-4720-ba2c-6cd694773584",
-          "name": "feg",
-          "role": "grefggrreyyerwe"
         }
       ]
     },
@@ -76,6 +71,7 @@
         },
         {
           "id": "b21-raider",
+          "image": "/b21.jpg",
           "name": "B-21 Raider",
           "role": "Next-gen stealth bomber"
         }
@@ -125,93 +121,6 @@
           "role": "Strategic airlift (cargo)",
           "image": "/c17.jpg",
           "description": "Heavy airlifter built for rapid global transport of troops, vehicles, and supplies into austere or major airfields."
-        },
-        {
-          "id": "21df26f6-5c15-4ed0-85fd-7b4a7fa2232d",
-          "name": "ytr",
-          "role": "fhgui"
-        }
-      ]
-    },
-    {
-      "id": "046f15ed-4a43-491f-9d59-dff50134c898",
-      "title": "Test",
-      "items": [
-        {
-          "id": "ffa851fc-b3f0-439e-944f-1ae589fbc828",
-          "name": "wgrr",
-          "role": "rwggggrregetyu"
-        }
-      ]
-    },
-    {
-      "id": "e2694cdc-0950-4828-bb8d-02aebb2b8b36",
-      "title": "ksahjdxsodlklaskldassdsafqjwhshday",
-      "items": [
-        {
-          "id": "68db20df-ac1b-457b-a639-ef7a1b914e1d",
-          "name": "rsdthy",
-          "role": "sthytyury"
-        }
-      ]
-    },
-    {
-      "id": "9cd75e1e-9643-4754-94dd-a5d150c2c10c",
-      "title": "wsdEFACSDESDEACSDEACSDEACSDEACSDEACSDEACSDEACSDEACacacacacacacacacacacacac",
-      "items": []
-    },
-    {
-      "id": "c6e180b4-f188-4f11-807f-0291d433817a",
-      "title": "xd",
-      "rating": 5,
-      "date": "2026-03-20T23:51:31.440Z",
-      "items": []
-    },
-    {
-      "id": "b5dcff99-d069-437a-81c1-8d7b18b874e5",
-      "title": "ss",
-      "rating": 3,
-      "date": "2026-03-20T23:51:41.735Z",
-      "items": []
-    },
-    {
-      "id": "3fd208a3-f425-4e76-a2c7-d1b697fd1b58",
-      "title": "df",
-      "rating": 3,
-      "date": "2026-03-20T23:51:48.309Z",
-      "items": []
-    },
-    {
-      "id": "c5fb295a-876e-45ed-9225-a0529cd802ce",
-      "title": "sd",
-      "rating": 1,
-      "date": "2026-03-20T23:51:55.182Z",
-      "items": []
-    },
-    {
-      "id": "f905a9a5-a279-4355-8c36-0cd6da910047",
-      "title": "fwewfe",
-      "rating": 5,
-      "date": "2026-03-26T16:32:31.435Z",
-      "items": []
-    },
-    {
-      "id": "27a79f27-43a2-4129-974b-87c1d5611d1b",
-      "title": "ewf",
-      "rating": 1,
-      "date": "2026-03-26T16:32:37.207Z",
-      "items": []
-    },
-    {
-      "id": "72a1d658-8e0e-49b6-bcb2-094efc33e26d",
-      "title": "dfef",
-      "rating": 3,
-      "date": "2026-03-26T16:45:44.069Z",
-      "items": [
-        {
-          "id": "40e07fd9-1563-4c08-bcbb-ad0dd91d30f8",
-          "name": "fwe",
-          "role": "wfe"
         }
       ]
     },
