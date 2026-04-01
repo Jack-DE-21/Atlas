@@ -150,3 +150,11 @@ h1, h2, h3, h4, h5, p, .ui.header {
 .hide {
   display: none;
 }
+
+table {
+  margin: auto;
+}
+
+.ui.statistic .label table {
+  margin-top: 10px;
+}

@@ -10,6 +10,46 @@ const dashboard = {
     res.render('dashboard', { title: 'Dashboard', app, categories });
   },
 
+  createView(request, response) {
+  const searchTerm = request.query.searchTerm || "";
+
+  const categories = searchTerm
+    ? techStore.searchCategory(searchTerm)
+    : techStore.getCategories();
+
+  const sortField = request.query.sort;
+  const order = request.query.order === "desc" ? -1 : 1;
+
+  let sorted = categories;
+
+  if (sortField) {
+    sorted = categories.slice().sort((a, b) => {
+      if (sortField === "title") {
+        return a.title.localeCompare(b.title) * order;
+      }
+
+      if (sortField === "rating") {
+        return (a.rating - b.rating) * order;
+      }
+
+      return 0;
+    });
+  }
+
+  const viewData = {
+    title: "Dashboard",
+    app: techStore.getApp(),
+    categories: sortField ? sorted : categories,
+    search: searchTerm,
+    titleSelected: request.query.sort === "title",
+    ratingSelected: request.query.sort === "rating",
+    ascSelected: request.query.order === "asc",
+    descSelected: request.query.order === "desc",
+  };
+
+  response.render("dashboard", viewData);
+},
+
   async addCategory(req, res) {
     const timestamp = new Date();
 
@@ -29,7 +69,7 @@ const dashboard = {
     const categoryId = req.params.id;
     await techStore.removeCategory(categoryId);
     res.redirect('/dashboard');
-  },
+  }
 };
 
 export default dashboard;

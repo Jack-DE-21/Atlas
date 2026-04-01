@@ -42,6 +42,14 @@ getAllCategories() {
   return data.categories || [];
 },
 
+searchCategory(search) {
+  return this.getCategories().filter(category =>
+    category.title.toLowerCase().includes(search.toLowerCase())
+  );
+}
+
+
+
 };
 
 

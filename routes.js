@@ -25,4 +25,10 @@ router.get('/category/:id/deleteitem/:itemid', category.deleteItem);
 router.get('/dashboard/deletecategory/:id', dashboard.deleteCategory);
 
 router.get("/stats", stats.createView);
+
+router.get("/searchCategory", dashboard.createView);
+
+router.get('/sortData', dashboard.createView);
+
+
 export default router;
