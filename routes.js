@@ -1,34 +1,33 @@
-'use strict';
-
 import express from 'express';
-import welcome from './controllers/welcome.js';
+import accounts from './controllers/accounts.js';
+import start from './controllers/start.js';
 import dashboard from './controllers/dashboard.js';
-import halloffame from './controllers/halloffame.js';
-import about from './controllers/about.js';
 import category from './controllers/category.js';
-import stats from "./controllers/stats.js";
-
+import halloffame from './controllers/halloffame.js';
+import stat from './controllers/stats.js';
+import about from './controllers/about.js';
 
 const router = express.Router();
 
-router.get('/', welcome.index);
-router.get('/dashboard', dashboard.index);
-router.get('/halloffame', halloffame.index);
-router.get('/about', about.index);
-router.get('/category/:id', category.index);
+router.get('/', accounts.index);
+router.get('/login', accounts.login);
+router.get('/signup', accounts.signup);
+router.get('/logout', accounts.logout);
+router.post('/register', accounts.register);
+router.post('/authenticate', accounts.authenticate);
 
+router.get('/start', start.createView);
+router.get('/dashboard', dashboard.createView);
 router.post('/dashboard/addcategory', dashboard.addCategory);
-router.post('/category/:id/additem', category.addItem);
+router.get('/dashboard/deletecategory/:id', dashboard.deleteCategory);
+router.get('/about', about.createView);
+
+router.get('/category/:id', category.createView);
+router.post("/category/:id/additem", category.addItem);
 router.post('/category/:id/updateitem/:itemid', category.updateItem);
 router.get('/category/:id/deleteitem/:itemid', category.deleteItem);
 
-router.get('/dashboard/deletecategory/:id', dashboard.deleteCategory);
+router.get('/halloffame', halloffame.createView);
+router.get('/stat', stat.createView);
 
-router.get("/stats", stats.createView);
-
-router.get("/searchCategory", dashboard.createView);
-
-router.get('/sortData', dashboard.createView);
-
-
-export default router;
+export default router;  

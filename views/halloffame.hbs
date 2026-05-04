@@ -1,23 +1,187 @@
+{{> menu id="halloffame"}}
+
 <section class="ui segment">
-  <h2 class="ui header">Hall of Fame</h2>
-  <p>COLLECTIONS</p>
+  <h1 class="ui header">Hall of Fame</h1>
+  <p><strong>COLLECTIONS</strong></p>
 
-  {{#each categories}}
-    <h3 class="ui dividing header">{{title}}</h3> 
-
-    <div class="ui three stackable cards">
-      {{#each items}}
-        <div class="ui card">
-          <div class="image">
-            <img src="{{image}}" alt="{{name}}">
-          </div>
-          <div class="content">
-            <div class="header">{{name}}</div>
-            <div class="meta">{{role}}</div>
-            <div class="description">{{description}}</div>
-          </div>
+  <h3 class="ui header">Fighter Jets</h3>
+  <div class="ui three stackable cards">
+    <div class="card">
+      <div class="image">
+        <img src="/f22.jpg" alt="F-22 Raptor">
+      </div>
+      <div class="content">
+        <div class="header">F-22 Raptor</div>
+        <div class="meta">5th gen / air superiority</div>
+        <div class="description">
+          5th gen stealth air-dominance fighter designed for command air superiority with high-end sensors and manoeuvrability.
         </div>
-      {{/each}}
+      </div>
     </div>
-  {{/each}}
+
+    <div class="card">
+      <div class="image">
+        <img src="/f35.jpg" alt="F-35 Lightning II">
+      </div>
+      <div class="content">
+        <div class="header">F-35 Lightning II</div>
+        <div class="meta">Multirole / strike</div>
+        <div class="description">
+          5th gen multirole stealth aircraft built around sensor fusion and networked targeting across air, land, and sea missions.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image">
+        <img src="/f117.jpg" alt="F-117 Nighthawk">
+      </div>
+      <div class="content">
+        <div class="header">F-117 Nighthawk</div>
+        <div class="meta">Stealth attack (retired)</div>
+        <div class="description">
+          First operational stealth attack aircraft that proved low-observable strike doctrine and survivability against radar-guided defences.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image">
+        <img src="/f47.jpg" alt="F-47">
+      </div>
+      <div class="content">
+        <div class="header">F-47</div>
+        <div class="meta">6th gen concept / air dominance</div>
+        <div class="description">
+          Emerging concept for next-generation combat aviation capability and future air-dominance operations.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image">
+        <img src="/rafael.jpg" alt="Rafale">
+      </div>
+      <div class="content">
+        <div class="header">Rafale</div>
+        <div class="meta">Multirole / strike</div>
+        <div class="description">
+          Omnirôle fighter with balanced strike, interception, reconnaissance, and carrier-capable features.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image">
+        <img src="/ea18growler.jpg" alt="EA-18 Growler">
+      </div>
+      <div class="content">
+        <div class="header">EA-18 Growler</div>
+        <div class="meta">Electronic warfare</div>
+        <div class="description">
+          Electronic attack aircraft used for jamming and suppression of enemy air defences.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="ui header">Bombers</h3>
+  <div class="ui two stackable cards">
+    <div class="card">
+      <div class="image">
+        <img src="/b2.jpg" alt="B-2 Spirit">
+      </div>
+      <div class="content">
+        <div class="header">B-2 Spirit</div>
+        <div class="meta">Stealth strategic bomber</div>
+        <div class="description">
+          Flying wing stealth bomber optimised for long-range penetration and high-value strike missions.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image">
+        <img src="/b21.jpg" alt="B-21 Raider">
+      </div>
+      <div class="content">
+        <div class="header">B-21 Raider</div>
+        <div class="meta">Next-gen stealth bomber</div>
+        <div class="description">
+          Next-generation bomber designed for survivable deep strike in contested airspace.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="ui header">CCA</h3>
+  <div class="ui three stackable cards">
+    <div class="card">
+      <div class="image">
+        <img src="/shieldai.jpg" alt="Shield AI">
+      </div>
+      <div class="content">
+        <div class="header">Shield AI</div>
+        <div class="meta">Autonomy / uncrewed teaming</div>
+        <div class="description">
+          Autonomous loyal wingman and mission AI designed for reconnaissance, combat assistance, and contested environments.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image">
+        <img src="/andurilcca.jpg" alt="Anduril">
+      </div>
+      <div class="content">
+        <div class="header">ANDURIL</div>
+        <div class="meta">AI / combat assistance</div>
+        <div class="description">
+          AI-integrated air systems pushing autonomous combat aircraft concepts forward.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image">
+        <img src="/beoingcca.jpg" alt="Boeing MQ-25 Stingray">
+      </div>
+      <div class="content">
+        <div class="header">BOEING MQ-25 Stingray</div>
+        <div class="meta">AI refuelling</div>
+        <div class="description">
+          Carrier-based unmanned tanker and future force multiplier.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="ui header">Tankers / Cargo</h3>
+  <div class="ui two stackable cards">
+    <div class="card">
+      <div class="image">
+        <img src="/kc135.jpg" alt="KC-135 Stratotanker">
+      </div>
+      <div class="content">
+        <div class="header">KC-135 Stratotanker</div>
+        <div class="meta">Aerial refuelling</div>
+        <div class="description">
+          Aerial refuelling aircraft that massively extends fighter and bomber range.
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="image">
+        <img src="/c17.jpg" alt="C-17 Globemaster III">
+      </div>
+      <div class="content">
+        <div class="header">C-17 Globemaster III</div>
+        <div class="meta">Heavy airlift</div>
+        <div class="description">
+          Heavy airlifter built for rapid global transport of troops, vehicles, and supplies.
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

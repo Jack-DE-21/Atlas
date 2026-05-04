@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "firstName": "homer",
+      "lastName": "simpson",
+      "email": "homer@simpson.com",
+      "password": "secret",
+      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
+    },
+    {
+      "firstName": "marge",
+      "lastName": "simpson",
+      "email": "marge@simpson.com",
+      "password": "secret",
+      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
+    },
+    {
+      "firstName": "c",
+      "lastName": "c",
+      "email": "localhost.unbaked071@passmail.net",
+      "password": "WbG*d2x@A41#2JTj01Tp",
+      "id": "653b66c1-5b54-4942-b99e-1fe9d1daee48"
+    },
+    {
+      "firstName": "d",
+      "lastName": "d",
+      "email": "localhost.subtotal265@passmail.net",
+      "password": "!mDQ&K#ux4X*728kBzXu",
+      "id": "ef9d65f2-f009-4606-9f64-fac1df487380"
+    },
+    {
+      "firstName": "d",
+      "lastName": "d",
+      "email": "localhost.sedation004@passmail.net",
+      "password": "YC05Cg9jGb*jMB8dQJ%T",
+      "id": "010af066-0ed9-499e-b538-eaaaa8bdeade"
+    }
+  ]
+}

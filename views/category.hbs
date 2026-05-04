@@ -1,7 +1,9 @@
-<section class="ui segment">
-  <h2 class="ui header">{{category.title}}</h2>
+{{> menu}}
 
-  {{#if category.items.length}}
+<section class="ui segment">
+  <h2 class="ui header">{{singleCategory.title}}</h2>
+
+  {{#if singleCategory.items.length}}
 
     <table class="ui unstackable striped table">
       <thead>
@@ -12,22 +14,23 @@
           <th class="two wide"> </th>
         </tr>
       </thead>
+
       <tbody>
-        {{#each category.items}}
-          {{> listOneItem categoryId=../category.id itemIndex=@index}}
-          {{> edititem categoryId=../category.id itemIndex=@index}}
+        {{#each singleCategory.items}}
+          {{> listOneItem categoryId=../singleCategory.id itemIndex=@index}}
+          {{> edititem categoryId=../singleCategory.id itemIndex=@index}}
 
           <script>
-  document.querySelector("#showEdit{{@index}}").addEventListener("click", () => {
-    document.querySelector("#item{{@index}}").style.display = "none";
-    document.querySelector("#edit{{@index}}").style.display = "table-row";
-  });
+            document.querySelector("#showEdit{{@index}}").addEventListener("click", () => {
+              document.querySelector("#item{{@index}}").style.display = "none";
+              document.querySelector("#edit{{@index}}").style.display = "table-row";
+            });
 
-  document.querySelector("#hideEdit{{@index}}").addEventListener("click", () => {
-    document.querySelector("#item{{@index}}").style.display = "table-row";
-    document.querySelector("#edit{{@index}}").style.display = "none";
-  });
-</script>
+            document.querySelector("#hideEdit{{@index}}").addEventListener("click", () => {
+              document.querySelector("#item{{@index}}").style.display = "table-row";
+              document.querySelector("#edit{{@index}}").style.display = "none";
+            });
+          </script>
         {{/each}}
       </tbody>
     </table>
@@ -38,12 +41,13 @@
     </h3>
   {{/if}}
 
-  <form class="ui form" action="/category/{{category.id}}/additem" method="POST">
+  <form class="ui form" action="/category/{{singleCategory.id}}/additem" method="POST">
     <div class="two fields">
       <div class="field">
         <label>Name</label>
         <input type="text" name="name" placeholder="Name" required>
       </div>
+
       <div class="field">
         <label>Role</label>
         <input type="text" name="role" placeholder="Role" required>

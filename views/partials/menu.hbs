@@ -1,18 +1,21 @@
 <nav class="ui stackable menu">
   <header class="ui header item">
-    <a href="/"> Military Technology Atlas </a>
+    <a href="/start"> Military Technology Atlas </a>
   </header>
 
   <div class="right menu">
-    <a id="dashboard" class="item" href="/dashboard"> Dashboard </a>
-       <a id="hallOfFame" class="item" href="/halloffame"> Hall of Fame </a>
-           <a id="stats" class="item" href="/stats"> Statistics </a>
-    <a id="about" class="item" href="/about"> About </a>
- 
-
+    <span class="name">{{fullname}}</span>
+    <a id="dashboard" class="item" href="/dashboard">Dashboard</a>
+    <a id="halloffame" class="item" href="/halloffame">Hall of Fame</a>
+    <a id="stat" class="item" href="/stat">Statistics</a>
+    <a id="about" class="item" href="/about">About</a>
+    <a id="logout" class="item" href="/logout">Logout</a>
   </div>
 </nav>
 
 <script>
-  document.querySelector("#{{id}}").classList.add("active");
+  const activeItem = document.querySelector("#{{id}}");
+  if (activeItem) {
+    activeItem.classList.add("active");
+  }
 </script>

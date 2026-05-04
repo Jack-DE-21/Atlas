@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../controllers"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../node_modules"
+		},
+		{
+			"path": "../public"
+		},
+		{
+			"path": "../utils"
+		},
+		{
+			"path": "../views"
+		}
+	]
+}

@@ -1,18 +1,30 @@
 'use strict';
 
+import logger from '../utils/logger.js';
+import accounts from './accounts.js';
 import techStore from '../models/tech-store.js';
 
 const about = {
-  index(req, res) {
-    const app = techStore.getApp();
-    const categories = techStore.getCategories();
+  createView(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
+    logger.info('About page loading!');
 
-    const stats = {
-      categoryCount: categories.length,
-      itemCount: categories.reduce((sum, c) => sum + (c.items?.length || 0), 0),
+    if (!loggedInUser) {
+      return response.redirect('/');
+    }
+
+    const categories = techStore.getUserCategories(loggedInUser.id);
+    const totalCategories = categories.length;
+    const totalItems = categories.reduce((total, category) => total + category.items.length, 0);
+
+    const viewData = {
+      title: 'About',
+      fullname: `${loggedInUser.firstName} ${loggedInUser.lastName}`,
+      totalCategories,
+      totalItems,
     };
 
-    res.render('about', { title: 'About', app, stats });
+    response.render('about', viewData);
   },
 };
 

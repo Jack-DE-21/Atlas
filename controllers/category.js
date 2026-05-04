@@ -1,61 +1,77 @@
 'use strict';
 
-import { v4 as uuidv4 } from 'uuid';
+import logger from '../utils/logger.js';
 import techStore from '../models/tech-store.js';
+import accounts from './accounts.js';
 
 const category = {
-  index(req, res) {
-    const app = techStore.getApp();
-    const cat = techStore.getCategoryById(req.params.id);
+  createView(request, response) {
+    const categoryId = request.params.id;
+    const loggedInUser = accounts.getCurrentUser(request);
+    logger.debug(`Category id = ${categoryId}`);
 
-    if (!cat) {
-      return res.status(404).render('category', {
-        title: 'Not Found',
-        app,
-        category: { title: 'Category not found', items: [] },
-      });
+    if (!loggedInUser) {
+      return response.redirect('/');
     }
 
-    return res.render('category', {
-      title: cat.title,
-      app,
-      category: cat,
-    });
+    const viewData = {
+      title: 'Category',
+      singleCategory: techStore.getCategoryById(categoryId),
+      fullname: `${loggedInUser.firstName} ${loggedInUser.lastName}`,
+    };
+
+    response.render('category', viewData);
   },
 
-  async addItem(req, res) {
-    const categoryId = req.params.id;
+  addItem(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
+
+    if (!loggedInUser) {
+      return response.redirect('/');
+    }
+
+    const categoryId = request.params.id;
 
     const newItem = {
-      id: uuidv4(),
-      name: req.body.name,
-      role: req.body.role,
+      name: request.body.name,
+      role: request.body.role,
     };
 
-    await techStore.addItemToCategory(categoryId, newItem);
-    res.redirect(`/category/${categoryId}`);
+    techStore.addItemToCategory(categoryId, newItem);
+    response.redirect(`/category/${categoryId}`);
   },
 
-  async updateItem(req, res) {
-    const categoryId = req.params.id;
-    const itemId = req.params.itemid;
+  updateItem(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
+
+    if (!loggedInUser) {
+      return response.redirect('/');
+    }
+
+    const categoryId = request.params.id;
+    const itemIndex = Number(request.params.itemid);
 
     const updatedItem = {
-      id: itemId,
-      name: req.body.name,
-      role: req.body.role,
+      name: request.body.name,
+      role: request.body.role,
     };
 
-    await techStore.editItem(categoryId, itemId, updatedItem);
-    res.redirect(`/category/${categoryId}`);
+    techStore.editItemByIndex(categoryId, itemIndex, updatedItem);
+    response.redirect(`/category/${categoryId}`);
   },
 
-  async deleteItem(req, res) {
-    const categoryId = req.params.id;
-    const itemId = req.params.itemid;
+  deleteItem(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
 
-    await techStore.removeItemFromCategory(categoryId, itemId);
-    res.redirect(`/category/${categoryId}`);
+    if (!loggedInUser) {
+      return response.redirect('/');
+    }
+
+    const categoryId = request.params.id;
+    const itemIndex = Number(request.params.itemid);
+
+    techStore.removeItemByIndex(categoryId, itemIndex);
+    response.redirect(`/category/${categoryId}`);
   },
 };
 

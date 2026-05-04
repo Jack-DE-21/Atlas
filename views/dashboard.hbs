@@ -1,7 +1,9 @@
+{{> menu id="dashboard" }}
+
 <section class="ui segment">
   <h2 class="title">Dashboard</h2>
 
-  <form action="/sortData" method="GET" class="ui form search-form">
+  <form action="/dashboard" method="GET" class="ui form search-form">
     <div class="ui inline fields">
       <div class="field">
         <input type="text" name="searchTerm" placeholder="Search by title..." value="{{search}}">
@@ -58,7 +60,7 @@
         Total systems: {{items.length}}
 
         {{#if date}}
-          <br />
+          <br>
           <i class="calendar alternate outline icon"></i>
           Created on <i>{{formatDate date}}</i>
         {{/if}}
@@ -66,12 +68,11 @@
 
       {{#if rating}}
         <p>
-          <span
-            class="ui yellow disabled rating"
-            data-icon="star"
+          <div
+            class="ui yellow rating"
             data-rating="{{rating}}"
             data-max-rating="5">
-          </span>
+          </div>
 
           <span style="color: grey; font-size: 90%; font-style: italic">
             {{highlightPopular rating}}
@@ -86,6 +87,14 @@
       <a class="ui icon button" href="/dashboard/deletecategory/{{id}}" title="Delete {{title}}">
         <i class="trash violet icon"></i>
       </a>
+
+      
     </div>
   {{/each}}
 </section>
+
+<script>
+  $(document).ready(function () {
+    $('.ui.rating').rating('disable');
+  });
+</script>

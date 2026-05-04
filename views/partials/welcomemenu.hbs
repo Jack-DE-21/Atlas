@@ -1,0 +1,14 @@
+<nav class="ui menu">
+  <header class="ui header item"><a href="/start">Military Technology Atlas</a>
+  <div class="right menu">
+    <a id="signup" class="item" href="/signup">Signup</a>
+    <a id="login" class="item" href="/login">Login</a>
+  </div>
+</nav>
+
+<script>
+  const activeLink = document.querySelector("#{{id}}");
+  if (activeLink) {
+    activeLink.classList.add("active");
+  }
+</script>

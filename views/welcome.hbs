@@ -1,6 +1,11 @@
-<section class="ui segment">
-  <h1 class="ui header">Welcome to {{app.title}}!</h1>
-  <p>{{app.tagline}}</p>
+<nav class="ui menu">
+  <header class="ui header item"><a href="/">  </a></header>
+  <div class="right menu">
+    <a id="signup" class="item" href="/signup"> Signup </a>
+    <a id="login" class="item" href="/login"> Login </a>
+  </div>
+</nav>
 
-  <img class="ui fluid image" src="{{app.heroImage}}" alt="Hero image">
-</section>
+<script>
+  document.querySelector("#{{id}}").classList.add("active");
+</script>

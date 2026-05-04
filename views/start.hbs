@@ -1,11 +1,61 @@
-{{> menu}}
+{{> menu id="start" }}
 
-<section class="ui center aligned middle aligned segment">
-  
-  <h2>Assignment One Starter App</h2>
+<section class="ui center aligned middle aligned segment start-page">
+
+  <h2>Assignment One/Two</h2>
+
+  <div class="start-image">
+    <img src="/B21--.jpg" alt="">
+  </div>
 
   <p>
-    You can use this start view (along with the matching start controller and start route) as the starting point for your "welcome" view (i.e. your app's homepage). Read the assignment spec to see what other views you should add.
+    Welcome to my CA i hope you enjoy!!
+  </p>
+
+  <div class="ui hidden divider"></div>
+
+  <h3 class="ui header">
+    Your Statistics
+  </h3>
+
+  <p>
+    Your account currently contains:
+  </p>
+
+  <div class="ui centered three statistics">
+
+    <div class="ui statistic">
+      <div class="value">
+        <i class="folder open icon"></i>
+      </div>
+      <div class="label">
+        {{totalCategories}} Categories
+      </div>
+    </div>
+
+    <div class="ui red statistic">
+      <div class="value">
+        <i class="fighter jet icon"></i>
+      </div>
+      <div class="label">
+        {{totalItems}} Items
+      </div>
+    </div>
+
+    <div class="ui blue statistic">
+      <div class="value">
+        <i class="blue chart bar icon"></i>
+      </div>
+      <div class="label">
+        Average Items Per <br>
+        Category: {{averageItems}}
+      </div>
+    </div>
+
+  </div>
+
+  <p>
+    Logged in as {{fullname}}
   </p>
 
 </section>

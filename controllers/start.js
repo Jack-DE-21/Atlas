@@ -1,18 +1,45 @@
 'use strict';
 
-import logger from "../utils/logger.js";
-import appStore from "../models/app-store.js";
+import logger from '../utils/logger.js';
+import techStore from '../models/tech-store.js';
+import accounts from './accounts.js';
 
 const start = {
   createView(request, response) {
-    logger.info("Start page loading!");
-    
+    const loggedInUser = accounts.getCurrentUser(request);
+
+    if (!loggedInUser) {
+      return response.redirect('/');
+    }
+
+    const userCategories = techStore.getUserCategories(loggedInUser.id);
+
+    let totalItems = 0;
+
+    for (let category of userCategories) {
+      if (category.items) {
+        totalItems += category.items.length;
+      }
+    }
+
+    const totalCategories = userCategories.length;
+
+    let averageItems = 0;
+
+    if (totalCategories > 0) {
+      averageItems = totalItems / totalCategories;
+    }
+
     const viewData = {
-      title: "CA1 Starter App",
-      info: appStore.getAppInfo()
+      title: 'Start',
+      fullname: `${loggedInUser.firstName} ${loggedInUser.lastName}`,
+      totalCategories: totalCategories,
+      totalItems: totalItems,
+      averageItems: averageItems.toFixed(2),
     };
-    
-    response.render('start', viewData);   
+
+    logger.info('Start view rendering');
+    response.render('start', viewData);
   },
 };
 

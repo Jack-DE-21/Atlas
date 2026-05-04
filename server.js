@@ -1,28 +1,27 @@
-'use strict';
+"use strict";
 
-import express from 'express';
-import routes from "./routes.js";
+import express from "express";
 import logger from "./utils/logger.js";
-import { create } from 'express-handlebars';
+import routes from "./routes.js";
+import { create } from "express-handlebars";
+import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app.use(express.static("public"));
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cookieParser());
 
 const handlebars = create({
-  extname: '.hbs',
+  extname: ".hbs",
   helpers: {
-    eq(a, b) {
-      return a === b;
-    },
-
-    uppercase(inputString) {
+    uppercase: (inputString) => {
       return inputString.toUpperCase();
     },
 
-    formatDate(date) {
+    formatDate: (date) => {
       const dateCreated = new Date(date);
       const options = {
         weekday: "long",
@@ -30,11 +29,15 @@ const handlebars = create({
         month: "long",
         day: "2-digit",
       };
-      return dateCreated.toLocaleDateString("en-IE", options);
+      return `${dateCreated.toLocaleDateString("en-IE", options)}`;
     },
 
-    highlightPopular(rating) {
-      return rating >= 4 ? "Popular with listeners!" : "";
+    highlightPopular: (rating) => {
+      let message = "";
+      if (rating >= 4) {
+        message = "Popular with listeners!";
+      }
+      return message;
     },
   },
 });
@@ -44,6 +47,4 @@ app.set("view engine", ".hbs");
 
 app.use("/", routes);
 
-app.listen(port, () =>
-  logger.info(`Your app is listening on port ${port}`)
-);
+app.listen(port, () => logger.info(`Your app is listening on port ${port}`));
