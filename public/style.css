@@ -379,7 +379,7 @@ table {
 .ui.three.cards > .card .header,
 .ui.two.cards > .card .header {
   color: #ffffff !important;
-  min-height: 1.8em;
+  min-height: .2em;
   
 }
 
